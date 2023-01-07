@@ -1,4 +1,4 @@
-# define a dictionary of items and their prices
+# catagorizing items in different catagory
 items = {
     "Drinks": {
         "1": {"item": "Coke", "price":4, "stock": 20},
@@ -54,9 +54,8 @@ def get_code(item):
 
 
 # function to get valid amount of money from user
-# function to get valid amount of money from user
 def get_money(item, code):
-    # search for item in Drinks and Snacks dictionaries
+    # search for item in Drinks , Snacks,chocolate and coffee dictionaries
     for category, category_items in item.items():
         if code in category_items:
             item = category_items[code]
@@ -67,7 +66,7 @@ def get_money(item, code):
 
     while True:
         money = float(input("Enter money: "))
-        # check if enough money was provided
+        # check if the amount was enough
         if money > item["price"] or money==item["price"]:
             return money
             dispense_item(item, code,money)
@@ -78,7 +77,7 @@ def get_money(item, code):
 
 # function to dispense item and calculate change
 def dispense_item(item, code, money):
-    # search for item in Drinks and Snacks dictionaries
+    # search for item in Drinks ,Snacks,chocolates and coffee dictionaries
     for category, category_items in items.items():
         if code in category_items:
             item = category_items[code]
@@ -104,13 +103,13 @@ def suggest_purchase(item, code):
         print("You might also like:")
         for code, item in items["Snacks"].items():
             print(f'{code}: {item["item"]} ({item["price"]:.2f}dhs)')
-    elif code in items["Snacks"]:
+    elif code in items["coffee"]:
         print("You might also like:")
-        for code, item in items["Drinks"].items():
+        for code, item in items["chocolate"].items():
             print(f'{code}: {item["item"]} ({item["price"]:.2f}dhs)')
 
 
-# print(items["Drinks"]["A"][1])
+
 # main program
 while True:
     # print menu of items

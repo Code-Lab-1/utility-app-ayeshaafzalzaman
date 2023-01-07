@@ -22,6 +22,14 @@ items = {
         '15':{'item':"milky way",'price':5,'stock':5},
         '16':{'item':'bounty','price':4,'stock':4}
     },
+    "coffee": {
+        "17": {"item": "milk coffee", "price": 3, "stock": 25},
+        "18": {"item": "mocha", "price": 7, "stock": 13},
+        "19": {"item": "latte", "price": 15, "stock": 5},
+        "20": {"item": "cold coffee", "price": 9, "stock": 14},
+        '21':{'item':"black coffee",'price':9,'stock':5},
+        '22':{'item':'cappucino','price':10,'stock':4}
+    },
 
 }
 # function to print menu of items
